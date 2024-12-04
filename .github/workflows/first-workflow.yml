@@ -4,9 +4,11 @@ jobs :
     first-job:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout
+              uses: actions/checkout@v4
             - name: welcome message
               run : echo "Hello There"
             - name: list file
               run : ls
             - name: print README.md
-              run : cat REAdME.md
+              run : cat README.md
